@@ -1,0 +1,75 @@
+question 1
+1) Help Sheeba out 									    10 marks
+
+Sheeba was asked by a Recruiter to write down 100 numbers (1-100) randomly 
+but making sure that no number is repeated twice. At the end, the Recruiter found 
+out that Sheeba had done her work perfectly, but committed just one mistake of 
+repeating a number twice. Recruiter asked Sheeba that she recruiter her only 
+under one condition! If Sheeba is able to find out the only number which she is 
+repeated in an optimised manner.
+
+Can you write a pseudocode, which can help Sheeba to find out the number which 
+got repeated twice?
+
+
+int repeatedonce(int *arr,int n)
+{
+int i,sum1=0,sum2;
+sum2=(100*101)/2;
+for(i=0,i<n;i++)
+sum1=sum1+arr[i];
+
+repeat=abs(sum2-sum1);
+
+return repaet;
+}
+
+
+
+
+
+
+
+
+
+question 3
+
+3) Closest to zero 									    20 Marks
+
+This problem is also called minimum absolute sum pair. You are given an array of integers, containing both +ve and -ve numbers. You need to find the two elements such that their sum is closest to zero. eg. Array [15, 5, -20, 30, -45] Output should be 15, -20.
+
+Note: We want the sum to be closest to zero not minimum. The minimum in the above example would be (-20, -45), but that is incorrect.
+
+
+METHOD 1 O(N*N) COMPLEXITY
+For each element find the sum of it with every other element in the array and compare sum. Finally, return the minimum sum
+
+METHOD 2 (Sorting) 
+
+1) Sort all the elements of the input array.
+2) Use two index variables l and r to traverse from left and right ends respectively. Initialize l as 0 and r as n-1.
+3) sum = a[l] + a[r]
+4) If sum is -ve, then l++
+5) If sum is +ve, then r–
+6) Keep track of abs min sum.
+7) Repeat steps 3, 4, 5 and 6 while l < r Implementation
+
+
+# include <stdio.h>
+# include <math.h>
+
+void minAbsSumPair(int arr[], int n)
+{
+  
+  int sum, min_sum = 65536;
+ 
+  int l = 0, r = n-1;
+ 
+  
+  int min_l = l, min_r = n-1;
+ 
+ 
+  if(n < 2)
+  {
+    printf("Invalid Input");
+    return;
