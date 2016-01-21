@@ -291,7 +291,9 @@ sample 49 = 00110001
 now sample 49 would be taken by 1, 3, 5, 7 That way if  was the poisoned one, only those rat would die.
 After four weeks, line the rat up in their bit order and read each living rat as a 0 bit and each dead rat as a 1 bit.
 
-so LOG2(100)== 6.64 ~ 7 rats
+so we need 8 rats
+
+
 
 
 
